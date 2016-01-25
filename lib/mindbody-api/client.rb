@@ -11,8 +11,9 @@ module MindBody
           if @globals.respond_to?(key)
             @globals.send(key, value)
           end
+          @globals.send(logger: Rails.logger)
         end
-      
+
         locals = locals.has_key?(:message) ? locals[:message] : locals
         locals = fixup_locals(locals)
         params = {:message => {'Request' => auth_params.merge(locals)}}
