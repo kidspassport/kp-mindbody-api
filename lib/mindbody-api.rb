@@ -24,7 +24,7 @@ module MindBody
       {
         log: true,
         log_level: :debug,
-        logger: Rails.Logger,
+        logger: Rails.logger,
         source_name:  ENV['MINDBODY_SOURCE_NAME'] || '',
         source_key: ENV['MINDBODY_SOURCE_KEY'] || '',
         site_ids: (ENV['MINDBODY_SITE_IDS'] || '').scan(/-?\d+/).map(&:to_i),
