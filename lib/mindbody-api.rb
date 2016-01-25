@@ -23,7 +23,7 @@ module MindBody
       defaults =
       {
         log: true,
-        log_level: :debug,
+        log_level: :info,
         logger: Rails.logger,
         source_name:  ENV['MINDBODY_SOURCE_NAME'] || '',
         source_key: ENV['MINDBODY_SOURCE_KEY'] || '',
