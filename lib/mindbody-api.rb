@@ -20,9 +20,11 @@ module MindBody
   class Config < OpenStruct
 
     def initialize()
-      defaults = 
+      defaults =
       {
+        log: true,
         log_level: :debug,
+        logger: Rails.Logger,
         source_name:  ENV['MINDBODY_SOURCE_NAME'] || '',
         source_key: ENV['MINDBODY_SOURCE_KEY'] || '',
         site_ids: (ENV['MINDBODY_SITE_IDS'] || '').scan(/-?\d+/).map(&:to_i),
